@@ -1,0 +1,39 @@
+@color-background: #C8E0ED;
+@color-foreground: #098BAA;
+
+div.background {
+	background-color: @color-background;
+	display: block;
+	overflow: auto;
+
+	.top {
+		margin-top: 30px;
+	}
+	.bottom {
+		margin-top: 8px;
+		margin-bottom: 30px;
+	}
+}
+div.foreground {
+	background-color: @color-foreground;
+	display: inline-block;
+	height: 670px;
+	.tall {
+		height: 600px;
+	}
+}
+
+div.text {
+	width: 200px;
+	text-align: center;
+	vertical-align: middle;
+	.background {
+		float: right;
+	}
+}
+
+div.foreground-wrapper {
+	opacity: 30%;
+	z-index: 1;
+	display: inline;
+}

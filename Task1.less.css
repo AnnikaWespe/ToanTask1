@@ -1,0 +1,39 @@
+div.background{
+	background-color: #C8E0ED;
+	display: block;
+	overflow: auto;
+}
+div.background.top{
+	margin-top: 30px;
+}
+div.background.bottom{
+	margin-top: 8px;
+	margin-bottom: 30px;
+}
+div.text.background{
+	width: 200px;
+	float: right;
+	text-align: center;
+	vertical-align: middle;
+}
+div.text.foreground{
+	width: 200px;
+	text-align: center;
+	vertical-align: middle;
+}
+div.foreground-wrapper{
+	opacity: 30%;
+	z-index: 1;
+	display: inline;
+}
+div.foreground{
+	background-color: #098BAA;
+	display: inline-block;
+}
+div.foreground.tall{
+	height: 600px;
+}
+
+div.foreground.small{
+	height : 670px;
+}
