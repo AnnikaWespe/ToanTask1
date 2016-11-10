@@ -1,39 +1,80 @@
 @color-background: #C8E0ED;
 @color-foreground: #098BAA;
+@margin-large: 30px;
+@margin-small: 10px;
+@height-div-large: 670px;
+@height-div-small: 590px;
+@width-boxes-foreground: 200px;
+@text-width-background: 200px;
+@height-table-header: 70px;
+@width-table-header: 620px;
 
 div.background {
 	background-color: @color-background;
 	display: block;
 	overflow: auto;
 
-	.top {
-		margin-top: 30px;
+	&.top {
+		margin-top: @margin-large;
 	}
-	.bottom {
-		margin-top: 8px;
-		margin-bottom: 30px;
+	&.bottom {
+		margin-top: @margin-small;
+		margin-bottom: @margin-large;
 	}
+}
+.foreground, table {
+	float: left;
+}
+table{
+	margin: 0 @margin-large;
 }
 div.foreground {
 	background-color: @color-foreground;
-	display: inline-block;
-	height: 670px;
-	.tall {
-		height: 600px;
+	height: @height-div-large;
+
+	&.small {
+		height: @height-div-small;
+		margin-top: @margin-small;
+		&.middle{
+			margin-left: @margin-small;
+			margin-right: @margin-small;
+		}
+	}
+
+	&.tableHeader {
+		height: @height-table-header;
+		width: @width-table-header;
 	}
 }
-
 div.text {
-	width: 200px;
+	width: @width-boxes-foreground;
 	text-align: center;
 	vertical-align: middle;
-	.background {
-		float: right;
-	}
-}
 
+	&.text-background {
+		float: right;
+		width: @text-width-background;
+	}
+	&.text-tableHeader {
+		width: @width-table-header;
+		height: @height-table-header;
+		text-align: center;
+		vertical-align: middle;
+		line-height: @height-table-header;
+	}
+	&.text-foreground, &.text-tableHeader{
+		color: white;
+	}
+	&.text-foreground.sides{
+		margin-top: 200px;
+	}
+	&.text-foreground.table{
+			margin-top: 120px;
+		}
+}
 div.foreground-wrapper {
 	opacity: 30%;
 	z-index: 1;
 	display: inline;
+	overflow: hidden;
 }
