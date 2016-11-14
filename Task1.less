@@ -11,7 +11,7 @@
 @width-boxes-foreground-hover: 137px;
 @width-blue-background: 820px;
 @height-table-header: 40px;
-@width-table-header: 397px;
+@width-table-header: 396px;
 @margin-text-sides: 170px;
 @margin-text-table: 127px;
 @height-procurement-box: 70px;
@@ -48,9 +48,6 @@ div.procurement-box {
 	font-size: 130%;
 	line-height: 30px;
 	padding: 5px;
-	-moz-box-shadow: 0px 0px 10px 0px #000000;
-	-webkit-box-shadow: 0px 0px 10px 0px #000000;
-	box-shadow: 0px 0px 10px 0px #000000;
 }
 p.procurement-box {
 	display: table-cell;
@@ -66,7 +63,7 @@ div.foreground {
 	background-color: @color-foreground;
 	height: @height-div-large;
 	margin-top: @margin-large;
-
+	position: relative;
 	&.small {
 		height: @height-div-small;
 		margin-top: @margin-small;
@@ -145,37 +142,24 @@ div.test-div {
 	width: 961px;
 }
 div.foreground:not(.tableHeader):hover {
-	&.small {
-		width: @width-boxes-foreground-hover;  
-	}
-	&.tall {
-		width: @width-boxes-foreground-hover;  
-	}
 	margin-right: -7px;
-	background-color: #1692AB;	/* Below we are using -26px ( 1/2 of total "extra' used for height). */
-	margin-top: -8px;  /* Make the border color lighter/brighter than non-hover color */
-  /* Add drop shadow effect */
-
-	/*   http://www.webestools.com/css3-box-shadow-generator-css-property-easy-shadows-div-html5-drop-shadow-moz-webkit-shadow-maker.html   */
+	width: @width-boxes-foreground-hover;  
+	&.middle{
+		margin-right: -4px;
+	}
+	background-color: #1692AB;
+	margin-top: -8px;  
 	-moz-box-shadow: 0px 0px 50px 0px #000000;
 	-webkit-box-shadow: 0px 0px 50px 0px #000000;
-	box-shadow: 0px 0px 50px 0px #000000;  /* Add curved corners via CSS3 Border radius to popped item that mimic original website effect */
-
- /* Give it a higher z-index to it's on top of adjacent items near it. */
-	z-index: 10;
+	box-shadow: 0px 0px 50px 0px #000000;  
 }
 div.procurement-box:hover {
 	width: @width-procurement-box-hover;
 	height: @height-procurement-box-hover;
 	margin-right: -7px;
-	margin-top: -5px;  /* Make the border color lighter/brighter than non-hover color */
-  /* Add drop shadow effect */
-
-	/*   http://www.webestools.com/css3-box-shadow-generator-css-property-easy-shadows-div-html5-drop-shadow-moz-webkit-shadow-maker.html   */
-	-moz-box-shadow: 0px 0px 50px 0px #000000;
-	-webkit-box-shadow: 0px 0px 50px 0px #000000;
-	box-shadow: 0px 0px 50px 0px #000000;  /* Add curved corners via CSS3 Border radius to popped item that mimic original website effect */
-
- /* Give it a higher z-index to it's on top of adjacent items near it. */
+	margin-top: -5px; 
+	-moz-box-shadow: 0px 0px 20px 0px #000000;
+	-webkit-box-shadow: 0px 0px 20px 0px #000000;
+	box-shadow: 0px 0px 20px 0px #000000;  
 	z-index: 10;
 }
