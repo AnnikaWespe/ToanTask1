@@ -1,37 +1,25 @@
 @color-background: #C8E0ED;
 @color-foreground: #093baa;
-
 @margin-large: 8px;
 @margin-small: 3px;
-
 @height-div-large: 610px;
 @height-div-small: 567px;
-
+@height-div-large-hover: 618px;
+@height-div-small-hover: 575px;
 @width-boxes-foreground: 130px;
-@text-width-background: 130px;
-
+@text-width-background: 135px;
+@width-boxes-foreground-hover: 137px;
 @width-blue-background: 830px;
-
 @height-table-header: 40px;
 @width-table-header: 400px;
-
 @margin-text-sides: 170px;
 @margin-text-table: 127px;
-
 @height-procurement-box: 70px;
 @width-procurement-box: 127px;
-
 @width-total: 961px;
 
-
-body{
+body {
 	font-family: 'Arial Narrow', arial;
-}
-
-.myContainer{
-	width: @width-total;
-	max-width: @width-total;
-	
 }
 
 div.background {
@@ -39,6 +27,7 @@ div.background {
 	display: block;
 	overflow: auto;
 	width: @width-blue-background;
+
 	&.top {
 		margin-top: @margin-large;
 	}
@@ -47,39 +36,47 @@ div.background {
 		margin-bottom: @margin-large;
 	}
 }
-div.procurement-box{
+div.procurement-box {
 	border: 1px solid black;
 	height: @height-procurement-box;
 	width: @width-procurement-box;
 	text-align: center;
 	vertical-align: middle;
 	margin-bottom: 20px;
-	line-height: 35px;
 	font-size: 130%;
+	line-height: 30px;
+	padding: 5px;
+	-moz-box-shadow: 0px 0px 10px 0px #000000;
+	-webkit-box-shadow: 0px 0px 10px 0px #000000;
+	box-shadow: 0px 0px 10px 0px #000000;
 }
-p.procurement-box{
+p.procurement-box {
 	display: table-cell;
-	vertical-align:middle;
+	vertical-align: middle;
 }
 .foreground, table {
 	float: left;
 }
-table{
+table {
 	margin: 0 @margin-large;
 }
 div.foreground {
 	background-color: @color-foreground;
 	height: @height-div-large;
+	margin-top: @margin-large;
 
+	&.left {
+		margin-left: @margin-large;
+	}
 	&.small {
 		height: @height-div-small;
 		margin-top: @margin-small;
-		&.middle{
+
+		&.middle {
 			margin-left: @margin-small;
 			margin-right: @margin-small;
 		}
 	}
-
 	&.tableHeader {
 		height: @height-table-header;
 		width: @width-table-header;
@@ -93,7 +90,7 @@ div.text {
 	&.text-background {
 		float: right;
 		width: @text-width-background;
-		padding-right: 5px;
+		padding-right: 10px;
 	}
 	&.text-tableHeader {
 		width: @width-table-header;
@@ -103,24 +100,23 @@ div.text {
 		line-height: @height-table-header;
 		vertical-align: middle;
 	}
-	&.text-foreground, &.text-tableHeader{
+	&.text-foreground, &.text-tableHeader {
 		color: white;
 	}
-	&.text-foreground.sides{
+	&.text-foreground.sides {
 		margin-top: @margin-text-sides;
 	}
-	&.text-foreground.table{
+	&.text-foreground.table {
 		margin-top: @margin-text-table;
 	}
 }
-.h4.tableHeader{
-	display:table-cell; 
-	vertical-align:middle;
+.h4.tableHeader {
+	display: table-cell;
+	vertical-align: middle;
 	height: @height-table-header;
 	width: @width-table-header;
 	font-size: 90%;
 }
-
 div.foreground-wrapper {
 	opacity: 0.7;
 	z-index: 1;
@@ -128,22 +124,45 @@ div.foreground-wrapper {
 	overflow: hidden;
 	position: absolute;
 }
-div.background-wrapper{
+div.background-wrapper {
 	position: absolute;
-	top: 0; left: 0; width: @width-total;
+	top: 0;
+	left: 0;
+	width: @width-total;
 	overflow: auto;
 }
-div.white-background{
+div.white-background {
 	display: inline-block;
-	vertical-align:top;
+	vertical-align: top;
 	margin-top: @margin-large;
 }
-div.blue-background{
+div.blue-background {
 	width: @width-blue-background;
 	display: inline-block;
 }
-div.test-div{
+div.test-div {
 	border: 1px solid black;
 	height: 800px;
 	width: 961px;
+}
+div.foreground:not(.tableHeader):hover {
+	&.small {
+		width: @width-boxes-foreground-hover;  
+	}
+	&.tall {
+		width: @width-boxes-foreground-hover;  
+		margin-right: -7px;
+	}
+
+	/* Below we are using -26px ( 1/2 of total "extra' used for height). */
+	margin-top: -8px;  /* Make the border color lighter/brighter than non-hover color */
+  /* Add drop shadow effect */
+
+	/*   http://www.webestools.com/css3-box-shadow-generator-css-property-easy-shadows-div-html5-drop-shadow-moz-webkit-shadow-maker.html   */
+	-moz-box-shadow: 0px 0px 50px 0px #000000;
+	-webkit-box-shadow: 0px 0px 50px 0px #000000;
+	box-shadow: 0px 0px 50px 0px #000000;  /* Add curved corners via CSS3 Border radius to popped item that mimic original website effect */
+
+ /* Give it a higher z-index to it's on top of adjacent items near it. */
+	z-index: 10;
 }
