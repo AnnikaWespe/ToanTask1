@@ -1,39 +1,147 @@
-div.background{
-	background-color: #C8E0ED;
-	display: block;
-	overflow: auto;
+body {
+  font-family: 'Arial Narrow', arial;
 }
-div.background.top{
-	margin-top: 30px;
+div.background {
+  background-color: #C8E0ED;
+  display: block;
+  overflow: auto;
+  width: 820px;
 }
-div.background.bottom{
-	margin-top: 8px;
-	margin-bottom: 30px;
+div.background.top {
+  margin-top: 8px;
 }
-div.text.background{
-	width: 200px;
-	float: right;
-	text-align: center;
-	vertical-align: middle;
+div.background.bottom {
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
-div.text.foreground{
-	width: 200px;
-	text-align: center;
-	vertical-align: middle;
+div.procurement-box {
+  border: 1px solid black;
+  height: 70px;
+  width: 127px;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 20px;
+  font-size: 130%;
+  line-height: 30px;
+  padding: 5px;
 }
-div.foreground-wrapper{
-	opacity: 30%;
-	z-index: 1;
-	display: inline;
+p.procurement-box {
+  display: table-cell;
+  vertical-align: middle;
 }
-div.foreground{
-	background-color: #098BAA;
-	display: inline-block;
+.foreground,
+table {
+  float: left;
 }
-div.foreground.tall{
-	height: 600px;
+table {
+  margin: 0 8px;
 }
-
-div.foreground.small{
-	height : 670px;
+div.foreground {
+  background-color: #11788C;
+  height: 610px;
+  margin-top: 8px;
+  position: relative;
+  overflow: visible;
+}
+div.foreground.small {
+  height: 567px;
+  margin-top: 3px;
+}
+div.foreground.small.middle {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+div.foreground.tableHeader {
+  height: 40px;
+  width: 396px;
+}
+div.text {
+  width: 130px;
+  text-align: center;
+  vertical-align: middle;
+}
+div.text.text-background {
+  float: right;
+  width: 135px;
+  padding-right: 10px;
+}
+div.text.text-tableHeader {
+  width: 396px;
+  height: 40px;
+  font-family: 'Arial Narrow', arial;
+  font-weight: normal;
+  line-height: 40px;
+  vertical-align: middle;
+}
+div.text.text-foreground,
+div.text.text-tableHeader {
+  color: white;
+}
+div.text.text-foreground.sides {
+  margin-top: 170px;
+}
+div.text.text-foreground.table {
+  margin-top: 127px;
+}
+.h4.tableHeader {
+  display: table-cell;
+  vertical-align: middle;
+  height: 40px;
+  width: 396px;
+  font-size: 90%;
+}
+div.foreground-wrapper {
+  opacity: 0.7;
+  z-index: 1;
+  display: inline;
+  overflow: hidden;
+  position: absolute;
+}
+div.background-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 961px;
+  overflow: auto;
+}
+div.white-background {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 8px;
+}
+div.blue-background {
+  width: 820px;
+  display: inline-block;
+  margin-right: 3px;
+}
+div.test-div {
+  border: 1px solid black;
+  height: 800px;
+  width: 961px;
+}
+div.foreground:not(.tableHeader):hover {
+  margin-right: -7px;
+  width: 137px;
+  background-color: #1692AB;
+  margin-top: -12px;
+  -moz-box-shadow: 0px 0px 50px 0px #000000;
+  -webkit-box-shadow: 0px 0px 50px 0px #000000;
+  box-shadow: 0px 0px 50px 0px #000000;
+  z-index: 9;
+}
+div.foreground:not(.tableHeader):hover.middle {
+  margin-right: -4px;
+}
+div.foreground:not(.tableHeader):hover.tall {
+  margin-top: -2px;
+}
+div.procurement-box:hover {
+  width: 132px;
+  height: 75px;
+  margin-right: -7px;
+  margin-top: -5px;
+  -moz-box-shadow: 0px 0px 20px 0px #000000;
+  -webkit-box-shadow: 0px 0px 20px 0px #000000;
+  box-shadow: 0px 0px 20px 0px #000000;
+  z-index: 10;
 }
