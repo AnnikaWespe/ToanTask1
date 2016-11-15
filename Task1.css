@@ -1,17 +1,17 @@
-div.mybackground {
+div.background {
   background-color: #C8E0ED;
   display: block;
   overflow: auto;
   width: 820px;
 }
-div.mybackground.mytop {
+div.background.top {
   margin-top: 8px;
 }
-div.mybackground.mybottom {
+div.background.bottom {
   margin-top: 8px;
   margin-bottom: 8px;
 }
-div.myprocurement-box {
+div.procurement-box {
   border: 1px solid black;
   height: 70px;
   width: 127px;
@@ -21,50 +21,50 @@ div.myprocurement-box {
   font-size: 130%;
   line-height: 30px;
   padding: 5px;
-}
-p.myprocurement-box {
-  display: table-cell;
-  vertical-align: middle;
   font-family: 'Arial Narrow', arial;
 }
-.myforeground,
-table.mytable {
+p.procurement-box {
+  display: table-cell;
+  vertical-align: middle;
+}
+.foreground,
+table {
   float: left;
 }
-table.mytable {
+table {
   margin: 0 8px;
 }
-div.myforeground {
+div.foreground {
   background-color: #11788C;
   height: 610px;
   margin-top: 8px;
   position: relative;
   overflow: visible;
 }
-div.myforeground.mysmall {
+div.foreground.small {
   height: 567px;
   margin-top: 3px;
 }
-div.myforeground.mysmall.mymiddle {
+div.foreground.small.middle {
   margin-left: 3px;
   margin-right: 3px;
 }
-div.myforeground.mytableHeader {
+div.foreground.tableHeader {
   height: 40px;
   width: 396px;
 }
-div.mytext {
+div.text {
   width: 130px;
   text-align: center;
   vertical-align: middle;
   font-family: 'Arial Narrow', arial;
 }
-div.mytext.mytext-background {
+div.text.text-background {
   float: right;
   width: 135px;
   padding-right: 10px;
 }
-div.mytext.mytext-tableHeader {
+div.text.text-tableHeader {
   width: 396px;
   height: 40px;
   font-family: 'Arial Narrow', arial;
@@ -72,54 +72,53 @@ div.mytext.mytext-tableHeader {
   line-height: 40px;
   vertical-align: middle;
 }
-div.mytext.mytext-foreground,
-div.mytext.mytext-tableHeader {
+div.text.text-foreground,
+div.text.text-tableHeader {
   color: white;
 }
-div.mytext.mytext-foreground.mysides {
+div.text.text-foreground.sides {
   margin-top: 170px;
 }
-div.mytext.mytext-foreground.mytable {
+div.text.text-foreground.table {
   margin-top: 127px;
 }
-h4.mytext-foreground {
-  color: white;
-}
-h4.mytext-background {
-  color: black;
-}
-.h4.mytableHeader {
+.h4.tableHeader {
   display: table-cell;
   vertical-align: middle;
   height: 40px;
   width: 396px;
   font-size: 90%;
 }
-div.myforeground-wrapper {
+div.foreground-wrapper {
   opacity: 0.7;
   z-index: 1;
   display: inline;
   overflow: hidden;
   position: absolute;
 }
-div.mybackground-wrapper {
+div.background-wrapper {
   position: absolute;
   top: 0;
   left: 0;
   width: 961px;
   overflow: auto;
 }
-div.mywhite-background {
+div.white-background {
   display: inline-block;
   vertical-align: top;
   margin-top: 8px;
 }
-div.myblue-background {
+div.blue-background {
   width: 820px;
   display: inline-block;
   margin-right: 3px;
 }
-div.myforeground:not(.mytableHeader):hover {
+div.test-div {
+  border: 1px solid black;
+  height: 800px;
+  width: 961px;
+}
+div.foreground:not(.tableHeader):hover {
   margin-right: -7px;
   width: 137px;
   background-color: #1692AB;
@@ -129,13 +128,13 @@ div.myforeground:not(.mytableHeader):hover {
   box-shadow: 0px 0px 50px 0px #000000;
   z-index: 9;
 }
-div.myforeground:not(.mytableHeader):hover.mymiddle {
+div.foreground:not(.tableHeader):hover.middle {
   margin-right: -4px;
 }
-div.myforeground:not(.mytableHeader):hover.mytall {
+div.foreground:not(.tableHeader):hover.tall {
   margin-top: -2px;
 }
-div.myprocurement-box:hover {
+div.procurement-box:hover {
   width: 132px;
   height: 75px;
   margin-right: -7px;

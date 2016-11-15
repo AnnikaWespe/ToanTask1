@@ -2,8 +2,10 @@
 @color-foreground: #11788C;
 @margin-large: 8px;
 @margin-small: 3px;
+
 @height-div-large: 610px;
 @height-div-small: 567px;
+
 @width-boxes-foreground: 130px;
 @text-width-background: 135px;
 @width-boxes-foreground-hover: 137px;
@@ -18,150 +20,153 @@
 @height-procurement-box-hover: 75px;
 @width-total: 961px;
 
-div.mybackground {
-background-color: @color-background;
-display: block;
-overflow: auto;
-width: @width-blue-background;
-&.mytop {
-margin-top: @margin-large;
+
+div.background {
+	background-color: @color-background;
+	display: block;
+	overflow: auto;
+	width: @width-blue-background;
+
+	&.top {
+		margin-top: @margin-large;
+	}
+	&.bottom {
+		margin-top: @margin-large;
+		margin-bottom: @margin-large;
+	}
 }
-&.mybottom {
-margin-top: @margin-large;
-margin-bottom: @margin-large;
+div.procurement-box {
+	border: 1px solid black;
+	height: @height-procurement-box;
+	width: @width-procurement-box;
+	text-align: center;
+	vertical-align: middle;
+	margin-bottom: 20px;
+	font-size: 130%;
+	line-height: 30px;
+	padding: 5px;
+  	font-family: 'Arial Narrow', arial;
+
 }
+p.procurement-box {
+	display: table-cell;
+	vertical-align: middle;
 }
-div.myprocurement-box {
-border: 1px solid black;
-height: @height-procurement-box;
-width: @width-procurement-box;
-text-align: center;
-vertical-align: middle;
-margin-bottom: 20px;
-font-size: 130%;
-line-height: 30px;
-padding: 5px;
+.foreground, table {
+	float: left;
 }
-p.myprocurement-box {
-display: table-cell;
-vertical-align: middle;
-font-family: 'Arial Narrow', arial;
+table {
+	margin: 0 @margin-large;
 }
-.myforeground, table.mytable {
-float: left;
+div.foreground {
+	background-color: @color-foreground;
+	height: @height-div-large;
+	margin-top: @margin-large;
+	position: relative;
+	overflow: visible;
+	&.small {
+		height: @height-div-small;
+		margin-top: @margin-small;
+
+		&.middle {
+			margin-left: @margin-small;
+			margin-right: @margin-small;
+		}
+	}
+	&.tableHeader {
+		height: @height-table-header;
+		width: @width-table-header;
+	}
 }
-table.mytable {
-margin: 0 @margin-large;
+div.text {
+	width: @width-boxes-foreground;
+	text-align: center;
+	vertical-align: middle;
+  	font-family: 'Arial Narrow', arial;
+
+
+	&.text-background {
+		float: right;
+		width: @text-width-background;
+		padding-right: 10px;
+	}
+	&.text-tableHeader {
+		width: @width-table-header;
+		height: @height-table-header;
+		font-family: 'Arial Narrow', arial;
+		font-weight: normal;
+		line-height: @height-table-header;
+		vertical-align: middle;
+	}
+	&.text-foreground, &.text-tableHeader {
+		color: white;
+	}
+	&.text-foreground.sides {
+		margin-top: @margin-text-sides;
+	}
+	&.text-foreground.table {
+		margin-top: @margin-text-table;
+	}
 }
-div.myforeground {
-background-color: @color-foreground;
-height: @height-div-large;
-margin-top: @margin-large;
-position: relative;
-overflow: visible;
-&.mysmall {
-height: @height-div-small;
-margin-top: @margin-small;
-&.mymiddle {
-margin-left: @margin-small;
-margin-right: @margin-small;
+.h4.tableHeader {
+	display: table-cell;
+	vertical-align: middle;
+	height: @height-table-header;
+	width: @width-table-header;
+	font-size: 90%;
 }
+div.foreground-wrapper {
+	opacity: 0.7;
+	z-index: 1;
+	display: inline;
+	overflow: hidden;
+	position: absolute;
 }
-&.mytableHeader {
-height: @height-table-header;
-width: @width-table-header;
+div.background-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: @width-total;
+	overflow: auto;
 }
+div.white-background {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: @margin-large;
 }
-div.mytext {
-width: @width-boxes-foreground;
-text-align: center;
-vertical-align: middle;
-font-family: 'Arial Narrow', arial;
-&.mytext-background {
-float: right;
-width: @text-width-background;
-padding-right: 10px;
+div.blue-background {
+	width: @width-blue-background;
+	display: inline-block;
+	margin-right: 3px;
 }
-&.mytext-tableHeader {
-width: @width-table-header;
-height: @height-table-header;
-font-family: 'Arial Narrow', arial;
-font-weight: normal;
-line-height: @height-table-header;
-vertical-align: middle;
+div.test-div {
+	border: 1px solid black;
+	height: 800px;
+	width: 961px;
 }
-&.mytext-foreground, &.mytext-tableHeader {
-color: white;
+div.foreground:not(.tableHeader):hover {
+	margin-right: -7px;
+	width: @width-boxes-foreground-hover;  
+	&.middle{
+		margin-right: -4px;
+	}
+	background-color: #1692AB;
+	margin-top: -12px;
+	&.tall{
+		margin-top: -2px;
+	}  
+	-moz-box-shadow: 0px 0px 50px 0px #000000;
+	-webkit-box-shadow: 0px 0px 50px 0px #000000;
+	box-shadow: 0px 0px 50px 0px #000000;  
+	z-index: 9;
 }
-&.mytext-foreground.mysides {
-margin-top: @margin-text-sides;
-}
-&.mytext-foreground.mytable {
-margin-top: @margin-text-table;
-}
-}
-h4{
-&.mytext-foreground{
-color: white;
-}
-&.mytext-background{
-color: black;
-}
-}
-.h4.mytableHeader {
-display: table-cell;
-vertical-align: middle;
-height: @height-table-header;
-width: @width-table-header;
-font-size: 90%;
-}
-div.myforeground-wrapper {
-opacity: 0.7;
-z-index: 1;
-display: inline;
-overflow: hidden;
-position: absolute;
-}
-div.mybackground-wrapper {
-position: absolute;
-top: 0;
-left: 0;
-width: @width-total;
-overflow: auto;
-}
-div.mywhite-background {
-display: inline-block;
-vertical-align: top;
-margin-top: @margin-large;
-}
-div.myblue-background {
-width: @width-blue-background;
-display: inline-block;
-margin-right: 3px;
-}
-div.myforeground:not(.mytableHeader):hover {
-margin-right: -7px;
-width: @width-boxes-foreground-hover;
-&.mymiddle{
-margin-right: -4px;
-}
-background-color: #1692AB;
-margin-top: -12px;
-&.mytall{
-margin-top: -2px;
-}
--moz-box-shadow: 0px 0px 50px 0px #000000;
--webkit-box-shadow: 0px 0px 50px 0px #000000;
-box-shadow: 0px 0px 50px 0px #000000;
-z-index: 9;
-}
-div.myprocurement-box:hover {
-width: @width-procurement-box-hover;
-height: @height-procurement-box-hover;
-margin-right: -7px;
-margin-top: -5px;
--moz-box-shadow: 0px 0px 20px 0px #000000;
--webkit-box-shadow: 0px 0px 20px 0px #000000;
-box-shadow: 0px 0px 20px 0px #000000;
-z-index: 10;
+div.procurement-box:hover {
+	width: @width-procurement-box-hover;
+	height: @height-procurement-box-hover;
+	margin-right: -7px;
+	margin-top: -5px; 
+	-moz-box-shadow: 0px 0px 20px 0px #000000;
+	-webkit-box-shadow: 0px 0px 20px 0px #000000;
+	box-shadow: 0px 0px 20px 0px #000000;  
+	z-index: 10;
 }
